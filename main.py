@@ -15,9 +15,21 @@ lines = file.readlines()
 username = lines[0]
 password = lines[1]
 website = lines[2]
+lerning_page = lines[3]
 
-####################################################### configure chrome driver #########################
+####################################################### configure chrome driver ##########################################
 
 browser =  webdriver.Chrome(ChromeDriverManager().install())
-browser.get(website)
+browser.get(lerning_page)
 browser.maximize_window()
+time.sleep(4)
+
+##################################################### Login ################################################################
+
+elementID = browser.find_element_by_xpath("//*[@id='frmLogin']/div[5]/input")
+elementID.send_keys(username)
+
+elementID = browser.find_element_by_xpath("//*[@id='frmLogin']/div[6]/input")
+elementID.send_keys(password)
+elementID.submit()
+time.sleep(4)
