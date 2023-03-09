@@ -10,3 +10,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 import requests
 
 ####################################################### configure chrome driver #########################
+
+browser =  webdriver.Chrome(ChromeDriverManager().install())
+browser.get('https://www.instagram.com/accounts/login')
+browser.maximize_window()
