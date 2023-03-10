@@ -16,6 +16,7 @@ username = lines[0]
 password = lines[1]
 website = lines[2]
 lerning_page = lines[3]
+practice_by_topic_page = lines[4]
 
 ####################################################### configure chrome driver ##########################################
 
@@ -33,3 +34,13 @@ elementID = browser.find_element_by_xpath("//*[@id='frmLogin']/div[6]/input")
 elementID.send_keys(password)
 elementID.submit()
 time.sleep(4)
+
+################################################ navigate to desired page##################################################
+
+'''
+write code that takes you to your desired page  ex. practice by topic
+'''
+
+
+
+############################################## Get all chapter name #######################################################
